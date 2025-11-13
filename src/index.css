@@ -1,0 +1,113 @@
+body {
+  margin: 0;
+  background: #000;
+  color: white;
+  font-family: sans-serif;
+  overflow: hidden;
+}
+.feed {
+  height: 100vh;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+}
+.card {
+  height: 100vh;
+  scroll-snap-align: start;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  border-bottom: 1px solid #333;
+  background: radial-gradient(circle, #222 0%, #000 100%);
+}
+.fact-text {
+  font-size: 2rem;
+  font-weight: 800;
+  max-width: 600px;
+  margin: 20px 0;
+}
+.category {
+  text-transform: uppercase;
+  color: #888;
+  border: 1px solid #444;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+}
+.source-badge {
+  display: flex;
+  gap: 8px;
+  color: #4ade80;
+  background: rgba(0, 255, 0, 0.1);
+  padding: 8px 16px;
+  border-radius: 20px;
+  margin-top: 20px;
+}
+.fab {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+}
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 200;
+}
+.modal {
+  background: #222;
+  padding: 30px;
+  border-radius: 20px;
+  width: 90%;
+  max-width: 400px;
+}
+.modal input,
+.modal textarea {
+  width: 100%;
+  background: #333;
+  border: 1px solid #444;
+  color: white;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+}
+.modal textarea {
+  height: 100px;
+  resize: none;
+}
+.submit-btn {
+  width: 100%;
+  padding: 15px;
+  background: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+.close-btn {
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
